@@ -150,7 +150,7 @@ def input_to_index(string)
              
                 if won? 
                   puts "Congratulations X!"
-                else
+                else 
                 
                 
                 
