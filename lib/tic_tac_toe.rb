@@ -152,7 +152,7 @@ def input_to_index(string)
                   puts "Congratulations #{winner}!"
                   
                 else 
-                  draw 
+                  draw?
                 
                   
                 
