@@ -1,3 +1,4 @@
+  require 'pry'
 class TicTacToe
   
    def initialize
@@ -6,7 +7,7 @@ class TicTacToe
    end
    
   WIN_COMBINATIONS = [  
-  [0,1,2], # Top row
+  [0,1,2], 
   [3,4,5],
   [6,7,8],
   
@@ -103,19 +104,61 @@ def input_to_index(string)
   
   
   def won?
-  WIN_COMBINATIONS
-  #   FALSE
-  # else
+       WIN_COMBINATIONS.any? do |combo|
+         if @board[combo[0]] == @board[combo[1]] && @board[combo[0]] == @board[combo[2]] && position_taken?(combo[0])
+           return combo
+  
+  
   #   == WIN_COMBINATIONS
-  #   end
-  # # end
-    
-    
-    
-    
-    
-    
-    
-    
+            end
+         end
+           FALSE
   end
+  
+  
+  
+    def full?
+      # @board.include?("X") && @board.include?("O") &&
+      !@board.include?(" ")
+    end
+    
+    def draw?
+      
+      full? && !won?
+     end
+      
+      def over?
+        draw? || won?
+      end
+      
+       def winner 
+        # WIN_COMBINATIONS.each do |combo| 
+          
+        #   if @board[combo[0]] == @board[combo[1]] && @board[combo[0]] == @board[combo[2]] && position_taken?(combo[0])
+        #   binding.pry
+        #   end
+        if won? 
+          @board[won?[0]]
+          end
+       end
+         
+         def play
+        
+             until over? do 
+                 turn
+             end
+             
+                if won? 
+                  puts "Congratulations #{winner}!"
+                  
+                else 
+                puts "Cat's Game!"
+                end             
+          end
   end
+  
+  
+  
+  
+  
+  
