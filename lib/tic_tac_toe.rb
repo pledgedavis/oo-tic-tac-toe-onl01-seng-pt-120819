@@ -153,11 +153,9 @@ def input_to_index(string)
                   
                 else 
                   draw?
-                
+                puts "Cat's Game!"
                   
-                
-                
-                
+        
                 end             
           end
   end
