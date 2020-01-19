@@ -148,7 +148,8 @@ def input_to_index(string)
                  turn
              end
              
-                if won?
+                if won? 
+                  puts 
                 
                 
                 
