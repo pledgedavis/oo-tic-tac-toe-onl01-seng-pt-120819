@@ -149,8 +149,11 @@ def input_to_index(string)
              end
              
                 if won? 
-                  puts "Congratulations X!"
+                  puts "#{}C"
+                  
                 else 
+                  
+                  
                 
                 
                 
