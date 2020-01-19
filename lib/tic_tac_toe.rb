@@ -144,11 +144,16 @@ def input_to_index(string)
          
          def play
         
-             until over? 
-             turns
-           
-           
-           
+             until over? do 
+                 turn
              end
+             
+                if won?
+                
+                
+                
+                
+                
+                end             
           end
   end
