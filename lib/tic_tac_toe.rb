@@ -86,24 +86,36 @@ def input_to_index(string)
     
     def turn
     puts "1-9"
-    user_input = gets.chomp
+           user_input = gets.chomp
+           index = input_to_index(user_input) 
+    
+    
+  # valid_move?(index)
+    # current_player
+          if valid_move?(index)
+              move(index, current_player) 
+             else
+             turn
+           end
+     display_board
+     end
+
+  
+  
+  def won?
+  WIN_COMBINATIONS
+  #   FALSE
+  # else
+  #   == WIN_COMBINATIONS
+  #   end
+  # # end
+    
+    
+    
+    
+    
+    
+    
     
   end
-    
-    
   end
-#     . Ask the user for their move by specifying a position between 1-9.
-# 2. Receive the user's input.
-# 3. Translate that input into an index value.
-# 4. If the move is valid, make the move and display the board.
-# 5. If the move is invalid, ask for a new move until a valid move is received.
-#     ask for input
-# get input
-# translate input into index
-# if index is valid
-#   make the move for index
-#   show the board
-# else
-#   ask for input again
-# end
-    
